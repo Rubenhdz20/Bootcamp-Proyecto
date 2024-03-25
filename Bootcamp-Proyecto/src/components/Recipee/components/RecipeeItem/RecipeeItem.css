@@ -1,0 +1,10 @@
+.recipee-container{
+    @apply flex flex-row flex-nowrap place-content-between items-center 
+    m-4 w-[500px] p-4 bg-white border-2 border-gray-400 rounded-lg
+    hover:border-gray-200
+}
+
+.recipee-info{
+    @apply flex flex-row flex-nowrap gap-5 
+    text-gray-600 mx-auto
+}
