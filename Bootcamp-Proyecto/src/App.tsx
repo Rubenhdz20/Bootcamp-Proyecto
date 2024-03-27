@@ -1,9 +1,9 @@
 import './App.css'
-import MyRoutes from './routes'
+import HeroSection from '../src/views/HeroSection'
 
 function App() {
   return (
-      <MyRoutes/>
+      <HeroSection/>
   )
 }
 
