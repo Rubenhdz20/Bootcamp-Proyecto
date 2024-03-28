@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import SearchRecipee from '../views/SearchRecipee';
+import SearchRecipee from '../pages/SearchRecipee';
 
 const router = createBrowserRouter([
     {
