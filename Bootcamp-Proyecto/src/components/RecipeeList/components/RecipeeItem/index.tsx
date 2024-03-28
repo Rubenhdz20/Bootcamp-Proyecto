@@ -3,24 +3,24 @@ import './RecipeeItem.css'
 
 type RecipeeItemProps = {
     name: string,
-    image: string,
+    imageUrl: string,
     prepTime: number,
 }
 
-const RecipeeItem: FC<RecipeeItemProps> = ({name, image, prepTime}) => {
+const RecipeeItem: FC<RecipeeItemProps> = ({name, imageUrl, prepTime}) => {
     return (
         <div className="recipee-container">
             <div className="flex flex-col flex-nowrap items-start">
-                <p className="mb-4 text-black text-xl">{name}</p>
+                <p className="mb-4 text-black text-xl font-bold">{name}</p>
                 <div className="recipee-info">
                     <p>Level</p>
                     <p>{prepTime} mins</p>
                     <p>Rating</p>
                 </div>
             </div>
-            <img className="w-[150px] h-[120px] rounded-lg"
+            <img className="recipee-img"
             alt="Recipee Name"
-            src={image}/>
+            src={imageUrl}/>
         </div>
     )
 }

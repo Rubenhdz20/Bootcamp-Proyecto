@@ -22,7 +22,7 @@ const SearchBar = forwardRef(({onSearch}, ref) => {
 
     return (
         <div className="flex flex-row flex-nowrap place-content-around mb-6 p-4 gap-4">
-            <h2 className="text-3xl">Recipee Search</h2>
+            <h2 className="text-3xl font-bold">Recipee Search</h2>
             <input type="text"
             placeholder="Find a recipee"
             onChange={handleInputChange}
