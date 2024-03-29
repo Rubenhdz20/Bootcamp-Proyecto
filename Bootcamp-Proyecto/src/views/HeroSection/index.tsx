@@ -1,13 +1,18 @@
+import CtaButton from "../../components/CtaButton/Index";
+import MobileMenu from "../../components/MobileMenu/index";
 
 const HeroSection = () => {
     return(
         <>
             <div className="w-full h-full">
+                <div className="flex">
+                    <MobileMenu/>
+                    <p className="text-black text-xl font-black leading-10">MyFitnessWeb</p>
+                </div>
                 <div>
-                    <p className="text-black text-xl font-bold">MyFitnessWeb</p>
-                    <div className="bg-hero-pattern">
-                        <h1 className="text-white font-bold">Welcome to your free meal tracking and health information tool</h1>
-                        <p className="text-white">Get started with our free tool for tracking meals, healthy eating information, recipes, meal registration, and nutritional analysis. Improve your health and wellbeing.</p>
+                    <div className="bg-hero-pattern bg-cover h-[30rem]">
+                        <h1 className="mt-5 pt-[7rem] px-4 text-4xl text-white font-black">Welcome to your free meal tracking and health information tool</h1>
+                        <p className="px-5 pt-2 text-sm text-white">Get started with our free tool for tracking meals, healthy eating information, recipes, meal registration, and nutritional analysis. Improve your health and wellbeing.</p>
                     </div>
                 </div>
                 <div>
@@ -37,7 +42,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                     <h2 className="text-black">Change your life now!</h2>
-                    <button >Start now</button>
+                    <CtaButton/>
                 </div>
             </div>
         </>

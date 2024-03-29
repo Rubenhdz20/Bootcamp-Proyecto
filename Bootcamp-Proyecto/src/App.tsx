@@ -1,5 +1,5 @@
 import './App.css'
-import HeroSection from '../src/views/HeroSection'
+import HeroSection from './views/HeroSection/index'
 
 function App() {
   return (
