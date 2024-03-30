@@ -10,6 +10,8 @@ module.exports = {
     colors: {
       ...colors,
       'main-back': '#F7FCFA',
+      'green': '#638773',
+      'button': '#1AE570'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
