@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import './RecipeeItem.css'
+import './Recipees.css'
 
 type RecipeeItemProps = {
     name: string,

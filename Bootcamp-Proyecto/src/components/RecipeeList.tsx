@@ -1,10 +1,12 @@
 import { memo } from "react";
-import RecipeeItem from "./components/RecipeeItem"
+import RecipeeItem from "./RecipeeItem"
 
+/*
 type RecipeeListProps = {
     searchTerm: string,
     recipees: [],
 }
+*/
 
 const RecipeeList = () => {
     const renderList = [...Array(10).keys()] //arreglo para mostrar el render de la lista.
