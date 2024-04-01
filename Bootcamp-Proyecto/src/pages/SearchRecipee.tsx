@@ -1,5 +1,5 @@
-import RecipeeList from "../../components/RecipeeList";
-import SearchBar from "../../components/SearchBar";
+import RecipeeList from "../components/RecipeeList";
+import SearchBar from "../components/SearchBar";
 //import './index.css'
 
 const SearchRecipee = () => {

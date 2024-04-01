@@ -9,7 +9,7 @@ const SearchBar = forwardRef(({onSearch}, ref) => {
     }));
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        console.log(e.target.value)
+        //console.log(e.target.value)
         setSearch(e.target.value)
     }
 
