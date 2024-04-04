@@ -15,8 +15,8 @@ const SearchBar = forwardRef(({onSearch}, ref) => {
 
     const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>)=>{
         if (e.key === "Enter"){
-            console.log('Iniciando búsqueda');
-            //onSearch(search)
+            //console.log('Iniciando búsqueda');
+            onSearch(search)
         }
     }
 
