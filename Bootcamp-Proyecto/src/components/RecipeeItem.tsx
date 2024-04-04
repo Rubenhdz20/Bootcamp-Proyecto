@@ -5,21 +5,25 @@ type RecipeeItemProps = {
     name: string,
     imageUrl: string,
     prepTime: number,
+    calories: number,
+    mealType: string,
 }
 
-const RecipeeItem: FC<RecipeeItemProps> = ({name, imageUrl, prepTime}) => {
+const RecipeeItem: FC<RecipeeItemProps> = ({name, imageUrl, prepTime, calories, mealType}) => {
+    const roundedCalories = calories.toFixed()
+
     return (
         <div className="recipee-container">
             <div className="flex flex-col flex-nowrap items-start">
                 <p className="mb-4 text-black text-xl font-bold">{name}</p>
                 <div className="recipee-info">
-                    <p>Level</p>
-                    <p>{prepTime} mins</p>
-                    <p>Rating</p>
+                    <p>{mealType}</p>
+                    {prepTime > 0 && <p>{prepTime} mins</p>}
+                    <p>{roundedCalories} cals</p>
                 </div>
             </div>
             <img className="recipee-img"
-            alt="Recipee Name"
+            alt={name}
             src={imageUrl}/>
         </div>
     )
