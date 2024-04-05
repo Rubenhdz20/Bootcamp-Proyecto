@@ -2,21 +2,20 @@ import { create } from 'zustand';
 
 const BASE_URL = 'https://api.edamam.com/api/recipes/v2?';
 
-const initialState = {
-    searchResults: [],
-    isLoading: false,
-    error: undefined,
-}
-
-
-type State = {
+type Actions = {
     onSearchResults: (searchTtext:string) => Promise<void>,
 }
 
-type Actions = {
+type State = {
     searchResults: any[],
     isLoading: boolean,
     error: undefined | object | Error | unknown,
+}
+
+const initialState: State = {
+    searchResults: [],
+    isLoading: false,
+    error: undefined,
 }
 
 
@@ -40,6 +39,6 @@ const useRecipeStore = create<State & Actions>((set,get)=>({
             set({isLoading: false})
         }
     }
-}))
+}));
 
 export default useRecipeStore;

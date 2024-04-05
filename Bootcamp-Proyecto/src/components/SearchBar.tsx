@@ -21,7 +21,7 @@ const SearchBar = forwardRef(({onSearch}, ref) => {
     }
 
     return (
-        <div className="flex flex-row flex-nowrap place-content-around mb-6 p-4 gap-4">
+        <div ref={ref} className="flex flex-row flex-nowrap place-content-around mb-6 p-4 gap-4">
             <h2 className="text-3xl font-bold">Recipee Search</h2>
             <input type="text"
             placeholder="Find a recipee"
@@ -35,4 +35,7 @@ const SearchBar = forwardRef(({onSearch}, ref) => {
         </div>
     )
 })
+
+SearchBar.displayName = 'SearchBar'
+
 export default SearchBar;
