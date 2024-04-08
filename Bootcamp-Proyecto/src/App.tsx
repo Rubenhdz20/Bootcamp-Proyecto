@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import HeroSection from './views/HeroSection/index'
+import MyRoutes from './routes'
 
 function App() {
   return (
-      <HeroSection/>
+      <MyRoutes/>
   )
 }
 

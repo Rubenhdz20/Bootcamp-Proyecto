@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import CtaButton from "../../components/CtaButton/Index";
 import MobileMenu from "../../components/MobileMenu/index";
 
@@ -6,7 +7,9 @@ const HeroSection = () => {
         <>
             <div className="w-full h-full">
                 <div className="mt-6 flex px-12">
-                    <MobileMenu/>
+                    <Routes>
+                        <Route path="/MobileMenu" element={<MobileMenu />} />
+                    </Routes>
                     <p className="text-black text-xl font-black leading-10">MyFitnessWeb</p>
                 </div>
                 <div>
