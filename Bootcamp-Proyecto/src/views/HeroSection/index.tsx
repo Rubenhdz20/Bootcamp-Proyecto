@@ -53,7 +53,7 @@ const HeroSection = () => {
                 </div>
                 <div className="py-10">
                     <h2 className="mb-14 text-3xl text-center text-black font-bold">Change your life now!</h2>
-                    <CtaButton/>
+                    <CtaButton/> 
                 </div>
             </div>
         </>
