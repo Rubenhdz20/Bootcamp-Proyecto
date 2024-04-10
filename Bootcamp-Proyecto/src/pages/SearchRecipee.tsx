@@ -10,7 +10,7 @@ const SearchRecipee = () => {
     const error = useRecipeStore((state)=>state.error)
     const onSearchResults = useRecipeStore((state)=>state.onSearchResults)
     const [searchText,setSearchText] = useState<string>('')
-
+    
     console.log(searchResults)
 
     //const containerRef = useRef()
