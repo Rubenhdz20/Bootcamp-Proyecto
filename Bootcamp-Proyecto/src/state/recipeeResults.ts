@@ -1,6 +1,5 @@
 import { create } from 'zustand';
-
-const BASE_URL = 'https://api.edamam.com/api/recipes/v2';
+import { BASE_URL } from '../utils/constants';
 
 type Actions = {
     onSearchResults: (searchTtext:string) => Promise<void>,
@@ -17,7 +16,6 @@ const initialState: State = {
     isLoading: false,
     error: undefined,
 }
-
 
 const useRecipeStore = create<State & Actions>((set,get)=>({
     ...initialState,
