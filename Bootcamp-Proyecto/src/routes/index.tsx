@@ -4,13 +4,13 @@ import HeroSection from "../views/HeroSection";
 
 
 const router = createBrowserRouter([
-    {
-        path:'/',
-        element: <MobileMenu/>
+    {  
+        path:'/hero-section',
+        element: <HeroSection/>
     },
     {
-        path:'/src/views/HeroSection/index.tsx',
-        element: <HeroSection/>
+        path:'/mobile-menu',
+        element: <MobileMenu/>
     }
 ])
 
