@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MobileMenu from "../components/MobileMenu";
-import HeroSection from "../views/HeroSection";
+import HeroSection from "../pages/HeroSection";
 import SearchRecipee from '../pages/SearchRecipee';
 import RecipeDetails from '../pages/RecipeDetails';
 
