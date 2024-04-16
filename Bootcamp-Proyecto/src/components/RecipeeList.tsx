@@ -3,8 +3,8 @@ import RecipeeItem from "./RecipeeItem"
 import { useNavigate } from "react-router-dom";
 
 const RecipeeList = (props:any) => {
-    const recipes = props.recipes
-    const navigate = useNavigate()
+    const recipes = props.recipes;
+    const navigate = useNavigate();
     
     const handleRecipeeItemClick = (id:string) => { //Redirige a la página de la receta seleccionada
         navigate(`/detail/${id}`)
@@ -29,3 +29,4 @@ const RecipeeList = (props:any) => {
 }
 
 export default memo( RecipeeList );
+

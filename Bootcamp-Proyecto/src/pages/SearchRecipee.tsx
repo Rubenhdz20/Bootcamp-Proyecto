@@ -28,7 +28,7 @@ const SearchRecipee = () => {
     <div className="flex flex-col flex-nowrap place-content-center mx-auto">
         {/*<SearchBar onSearch={handleSearchBarRequest} ref={containerRef}/>*/}
         <div className="flex flex-row flex-nowrap place-content-around mb-6 p-4 gap-4">
-            <h2 className="text-3xl font-bold">Recipe Search</h2>
+            <h2 className="text-black text-3xl font-bold">Recipe Search</h2>
             <div>
                 <input type="text"
                 placeholder="Find a recipee"
@@ -49,3 +49,5 @@ const SearchRecipee = () => {
  )
 }
 export default SearchRecipee;
+
+// buscador de recetas 

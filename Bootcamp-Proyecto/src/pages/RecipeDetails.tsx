@@ -58,3 +58,5 @@ const RecipeDetails = () => {
 }
 
 export default RecipeDetails;
+
+// pagina de la receta en detalle 

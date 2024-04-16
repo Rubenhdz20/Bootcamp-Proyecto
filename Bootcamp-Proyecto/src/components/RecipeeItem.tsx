@@ -36,3 +36,5 @@ const RecipeeItem: FC<RecipeeItemProps> = ({id, name, imageUrl, prepTime, calori
 }
 
 export default RecipeeItem;
+
+// elemento que muesta la vista inicial de las recetas 
