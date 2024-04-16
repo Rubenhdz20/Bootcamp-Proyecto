@@ -31,7 +31,7 @@ const SearchRecipee = () => {
             <h2 className="text-black text-3xl font-bold">Recipe Search</h2>
             <div>
                 <input type="text"
-                placeholder="Find a recipee"
+                placeholder="Find a recipe"
                 onChange={handleInputChange}
                 value={searchText}
                 className="bg-gray-200 
@@ -39,7 +39,7 @@ const SearchRecipee = () => {
                 placeholder:text-gray-400 
                 p-2 rounded-lg mb-4"/>
                 <button onClick={handleSearchBarRequest}
-                className='bg-green-500 text-white m-1'>Search</button>
+                className='bg-green text-white m-1'>Search</button>
             </div>
         </div>
         {isLoading && <div>Cargando recetas...</div>}

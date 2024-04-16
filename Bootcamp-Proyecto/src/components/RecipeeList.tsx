@@ -18,7 +18,7 @@ const RecipeeList = (props:any) => {
                     <RecipeeItem key={`recipe-item-${index}`} name={recipeItem.recipe.label} 
                     id={recipeItem.recipe.uri.substring(51)}
                     prepTime={recipeItem.recipe.totalTime}
-                    imageUrl={recipeItem.recipe.images.SMALL.url}
+                    imageUrl={recipeItem.recipe.images.THUMBNAIL.url}
                     calories={recipeItem.recipe.calories.toFixed(2)}
                     mealType={recipeItem.recipe.mealType[0]}
                     onEventClick={handleRecipeeItemClick}/>     
