@@ -1,6 +1,5 @@
 import { useState } from "react";
 import RecipeeList from "../components/RecipeeList";
-//import SearchBar from "../components/SearchBar";
 
 import useRecipeStore from "../state/recipeeResults";
 
@@ -10,23 +9,17 @@ const SearchRecipee = () => {
     const error = useRecipeStore((state)=>state.error)
     const onSearchResults = useRecipeStore((state)=>state.onSearchResults)
     const [searchText,setSearchText] = useState<string>('')
-    
-    console.log(searchResults)
-
-    //const containerRef = useRef()
 
     const handleSearchBarRequest = async() => {
         onSearchResults(searchText)
     }
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        //console.log(e.target.value)
         setSearchText(e.target.value)
     }
 
  return (
     <div className="flex flex-col flex-nowrap place-content-center mx-auto">
-        {/*<SearchBar onSearch={handleSearchBarRequest} ref={containerRef}/>*/}
         <div className="flex flex-row flex-nowrap place-content-around mb-6 p-4 gap-4">
             <h2 className="text-black text-3xl font-bold">Recipe Search</h2>
             <div>
