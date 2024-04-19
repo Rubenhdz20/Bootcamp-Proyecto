@@ -1,5 +1,5 @@
 import { memo } from "react";
-import RecipeeItem from "./RecipeeItem"
+import RecipeeItem from "../RecipeItems/RecipeeItem"
 import { useNavigate } from "react-router-dom";
 
 const RecipeeList = (props:any) => {

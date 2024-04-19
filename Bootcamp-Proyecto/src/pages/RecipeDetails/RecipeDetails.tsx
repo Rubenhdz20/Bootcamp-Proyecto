@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BASE_URL } from '../utils/constants';
+import { BASE_URL } from '../../utils/constants';
 
 const RecipeDetails = () => {
     const {recipeId} = useParams()
