@@ -1,45 +1,33 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { BASE_URL } from '../utils/constants';
+import { useEffect } from "react";
+
+import useDetailStore from "../state/detailResults";
 
 const RecipeDetails = () => {
     const {recipeId} = useParams();
-    const [recipe, setRecipe] = useState<any>({});
-    const [isLoading,setIsLoading] = useState(false);
-    const [error, setError] = useState<any>(null);
+
+    const recipe = useDetailStore((state) => state.recipe);
+    const isLoading = useDetailStore((state) => state.isLoading);
+    const error = useDetailStore((state) => state.error);
+    const fetchRecipe = useDetailStore((state) => state.findRecipe);
 
     useEffect(()=>{
-        const fetchRecipe = async (id: string|undefined) => {
-            try {
-                setIsLoading(true); 
-                setError(undefined);
-                //llamada a la api
-                const results = await fetch(`${BASE_URL}/${ id }?type=public&app_id=${ import.meta.env.VITE_APP_ID }&app_key=${ import.meta.env.VITE_APP_KEY }`);
-                const data = await results.json();
-                setRecipe(data?.recipe);
-            } catch (error: undefined | object | Error | unknown) {
-                setError(error);
-            } finally {
-                setIsLoading(false);
-            }
-        }
 
         fetchRecipe(recipeId);
-    },[recipeId]);
 
-    console.log(recipe);
+    },[recipeId, fetchRecipe]);
 
     return (
         <>
         {isLoading && <div>Cargando...</div>}
         {error && <div>Ha ocurrido un error</div>}
         {!isLoading && (
-            <div className="flex flex-col gap-3 p-3 flex-nowrap place-items-center mx-auto text-black">
+            <div className="flex flex-col gap-3 p-3 flex-nowrap place-items-center mx-8 mb-8 text-black">
                 <img 
-                className="w-[400px] h-[200px] sm:w-[700px] sm:h-[300px] lg:w-[800px] lg:h-[400px]"
+                className="w-[400px] h-[250px] sm:w-[700px] sm:h-[350px] lg:w-[850px] lg:h-[400px]"
                 alt={recipe.label} 
                 src={recipe.images.LARGE.url}/>
-                <div className="flex flex-col mx-auto p-3 gap-3 sm:grid sm:grid-cols-3">
+                <div className="flex flex-col mx-auto p-3 gap-3 sm:grid sm:grid-cols-3 lg:ml-[150px]">
                     <div className="flex flex-col items-start gap-2 sm:col-span-1 p-2">
                         <h2 className="text-2xl font-bold ">{recipe.label}</h2>
                         <p>Prep. time: {recipe.totalTime} mins</p>
@@ -48,17 +36,19 @@ const RecipeDetails = () => {
                     <div className="flex flex-col items-start sm:col-span-2 p-2">
                         <h2 className="text-2xl font-bold ">Ingredients</h2>
                         <h2 className="text-lg">Total servings #</h2>
-                        {recipe.ingredientLines.map((ingredient:string,index:number)=>{
-                            return <p key={index}>{ingredient}</p>
-                        })}
+                        <ul>
+                            {recipe.ingredientLines.map((ingredient:string,index:number)=>{
+                                return <li key={index} className="text-left">{ingredient}</li>
+                            })}
+                        </ul>
                     </div>
                 </div>
                 <div>
                     <h2 className="text-2xl font-bold ">Nutritional Facts</h2>
                     <div className="flex flex-row p-2 gap-5">
-                        <div className="p-2 border-2 border-gray-300 rounded-lg">
+                        <div className="p-6 border-2 border-gray-300 rounded-lg">
                             <h2 className="text-lg">Calories</h2>
-                            <p className="text-xl font-bold">{recipe.calories} kcals</p>
+                            <p className="text-xl font-bold">{recipe.calories.toFixed(2)} kcals</p>
                         </div>
                         <div className="p-6 border-2 border-gray-300 rounded-lg">
                             <h2 className="text-lg">Carbs</h2>
