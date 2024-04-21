@@ -1,7 +1,6 @@
 import { useState } from "react";
 import RecipeeList from "../../components/RecipeList/RecipeeList";
 //import SearchBar from "../components/SearchBar";
-
 import useRecipeStore from "../../state/recipeeResults";
 
 const SearchRecipee = () => {

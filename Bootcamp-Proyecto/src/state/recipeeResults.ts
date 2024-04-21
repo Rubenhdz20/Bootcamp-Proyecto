@@ -17,7 +17,7 @@ const initialState: State = {
     error: undefined,
 }
 
-const useRecipeStore = create<State & Actions>((set,get)=>({
+const useRecipeStore = create<State & Actions>((set)=>({
     ...initialState,
     onSearchResults: async(searchText:string)=>{
         try {
@@ -40,5 +40,3 @@ const useRecipeStore = create<State & Actions>((set,get)=>({
 }));
 
 export default useRecipeStore;
-
-// llamada a la API 
