@@ -5,4 +5,6 @@ const CtaButton = () => {
     )
 }
 
+// crear funcion para que redirija a otra pagina 
+
 export default CtaButton;

@@ -23,6 +23,7 @@ const SearchRecipee = () => {
         setSearchText(e.target.value)
     }
 
+
  return (
     <div className="flex flex-col flex-nowrap place-content-center mx-auto">
         {/*<SearchBar onSearch={handleSearchBarRequest} ref={containerRef}/>*/}
@@ -30,7 +31,7 @@ const SearchRecipee = () => {
             <h2 className="text-black text-3xl font-bold">Recipe Search</h2>
             <div>
                 <input type="text"
-                placeholder="Find a recipee"
+                placeholder="Find a recipe"
                 onChange={handleInputChange}
                 value={searchText}
                 className="bg-gray-200 

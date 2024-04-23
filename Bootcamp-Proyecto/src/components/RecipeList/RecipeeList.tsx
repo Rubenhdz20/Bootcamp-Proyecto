@@ -14,7 +14,7 @@ const RecipeeList = (props:any) => {
         <div className="flex flex-col flex-nowrap">
             <h2 className="text-2xl font-bold ml-4 place-self-start">Popular Recipes</h2>
             <div className="flex flex-row flex-wrap place-content-center p-3 lg:grid lg:grid-cols-2">
-                {recipes.map((recipeItem:any,index:any)=>(
+                {recipes.map((recipeItem:any,index:any) => (
                     <RecipeeItem key={`recipe-item-${index}`} name={recipeItem.recipe.label} 
                     id={recipeItem.recipe.uri.substring(51)}
                     prepTime={recipeItem.recipe.totalTime}
