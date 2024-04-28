@@ -1,7 +1,6 @@
 .recipee-container{
     @apply flex flex-row flex-nowrap place-content-between items-center 
     m-2 w-[350px] sm:w-[450px] p-3 bg-white border-2 border-gray-300 rounded-lg
-    hover:border-gray-100 cursor-pointer
 }
 
 .recipee-info{
@@ -11,4 +10,8 @@
 
 .recipee-img{
     @apply w-[120px] sm:w-[150px] h-[90px] sm:h-[110px] rounded-lg
+}
+
+.recipe-btn{
+    @apply bg-green text-white mt-2 hover:bg-hover-green cursor-pointer
 }
