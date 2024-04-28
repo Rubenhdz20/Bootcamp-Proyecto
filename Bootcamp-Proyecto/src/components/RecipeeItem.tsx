@@ -19,7 +19,7 @@ const RecipeeItem: FC<RecipeeItemProps> = ({id, name, imageUrl, prepTime, calori
     }
 
     return (
-        <div className="recipee-container" onClick={handleDetailsClick}>
+        <div className="recipee-container">
             <div className="flex flex-col flex-nowrap items-start">
                 <p className="mb-4 text-black text-xl font-bold">{name}</p>
                 <div className="recipee-info">
@@ -27,6 +27,7 @@ const RecipeeItem: FC<RecipeeItemProps> = ({id, name, imageUrl, prepTime, calori
                     {prepTime > 0 && <p>{prepTime} mins</p>}
                     <p>{calories} cals</p>
                 </div>
+                <button   className='recipe-btn' onClick={handleDetailsClick}>See more</button>
             </div>
             <img className="recipee-img"
             alt={name}

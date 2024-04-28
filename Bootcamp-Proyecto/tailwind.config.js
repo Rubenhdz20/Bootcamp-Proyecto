@@ -11,6 +11,7 @@ module.exports = {
       ...colors,
       'main-back': '#F7FCFA',
       'green': '#638773',
+      'hover-green': '#88BA99',
       'button': '#1AE570'
     },
     fontFamily: {
