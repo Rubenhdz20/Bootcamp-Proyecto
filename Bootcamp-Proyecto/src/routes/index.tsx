@@ -3,6 +3,7 @@ import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../pages/HeroSection";
 import SearchRecipee from '../pages/SearchRecipee';
 import RecipeDetails from '../pages/RecipeDetails';
+import MealLoggin from "../pages/MealLoggin";
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
     {
         path:'/detail/:recipeId',
         element: <RecipeDetails/>
-    }, 
+    },
+    {
+        path:'/MealLoggin',
+        element: <MealLoggin/>
+    },  
     {   
         path:'/mobile-menu',
         element: <MobileMenu/>
