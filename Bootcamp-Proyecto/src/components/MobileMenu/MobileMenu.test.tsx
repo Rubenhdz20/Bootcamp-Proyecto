@@ -2,7 +2,7 @@ import { test, expect, describe } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 
-import MobileMenu from "./MobileMenu";
+import MobileMenu from ".";
 
 describe(MobileMenu,() => {
     const router = createMemoryRouter([
