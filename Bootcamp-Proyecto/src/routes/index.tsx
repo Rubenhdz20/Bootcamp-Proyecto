@@ -4,12 +4,14 @@ import HeroSection from "../pages/HeroSection";
 import SearchRecipee from '../pages/SearchRecipee';
 import RecipeDetails from '../pages/RecipeDetails';
 import MealLoggin from "../pages/MealLoggin";
+import Error404 from "../pages/Error404";
 
 
 const router = createBrowserRouter([
     {  
         path:'/',
-        element: <HeroSection/>
+        element: <HeroSection/>,
+        errorElement: <Error404/>
     },
     {
         path:'/search-recipe',
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
         element: <RecipeDetails/>
     },
     {
-        path:'/MealLoggin',
+        path:'/meal-loggin',
         element: <MealLoggin/>
     },  
     {   
