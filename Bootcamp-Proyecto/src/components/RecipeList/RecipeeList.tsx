@@ -29,4 +29,3 @@ const RecipeeList = (props:any) => {
 }
 
 export default memo( RecipeeList );
-
