@@ -8,12 +8,8 @@ import MealLoggin from "../pages/MealLoggin";
 
 const router = createBrowserRouter([
     {  
-        path:'/hero-section',
-        element: <HeroSection/>
-    },
-    {
         path:'/',
-        element: <div>Pagina nutricional</div>
+        element: <HeroSection/>
     },
     {
         path:'/search-recipe',
