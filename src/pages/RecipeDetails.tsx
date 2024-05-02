@@ -17,6 +17,8 @@ const RecipeDetails = () => {
 
     },[recipeId, fetchRecipe]);
 
+    console.log(recipe)
+
     return (
         <>
         {isLoading && <div>Cargando...</div>}
