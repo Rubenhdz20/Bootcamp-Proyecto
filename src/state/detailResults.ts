@@ -18,6 +18,7 @@ type State = {
         ingredientLines: string[],
         calories: number,
         mealType: string,
+        url: string,
         totalNutrients: {
             CHOCDF:{
                 quantity: number,
@@ -45,6 +46,7 @@ const initialState: State = {
         ingredientLines: ['Ingredient'],
         calories: 0,
         mealType: '',
+        url: '',
         totalNutrients: {
             CHOCDF:{
                 quantity: 0,
@@ -77,6 +79,7 @@ const useDetailStore = create<State & Actions>()(immer((set) => ({
                 state.recipe.ingredientLines = data?.recipe.ingredientLines;
                 state.recipe.calories = data?.recipe.calories;
                 state.recipe.mealType = data?.recipe.mealType;
+                state.recipe.url = data?.recipe.url;
                 state.recipe.totalNutrients.CHOCDF.quantity = data?.recipe.totalNutrients.CHOCDF.quantity
                 state.recipe.totalNutrients.CHOCDF.unit = data?.recipe.totalNutrients.CHOCDF.unit
                 state.recipe.totalNutrients.PROCNT.quantity = data?.recipe.totalNutrients.PROCNT.quantity
