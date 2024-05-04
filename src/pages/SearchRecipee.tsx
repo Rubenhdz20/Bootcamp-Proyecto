@@ -50,9 +50,9 @@ const SearchRecipee = () => {
                 </div>
             </div>
             {isLoading && <div>Cargando recetas...</div>}
-            {error && <div>Disculpa, ha ocurrido un error</div>}
             {!isLoading && <RecipeeList recipes={searchResults}/>}
         </div>
+        {error && <div className="text-black">Disculpa, ha ocurrido un error</div>}
     </>
    
  )
