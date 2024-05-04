@@ -48,7 +48,7 @@ const RecipeDetails = () => {
                     <div className="flex flex-row p-2 gap-5">
                         <div className="p-6 border-2 border-gray-300 rounded-lg">
                             <h2 className="text-lg">Calories</h2>
-                            <p className="text-xl font-bold">{recipe.calories.toFixed(2)} kcals</p>
+                            <p className="text-xl font-bold">{recipe.calories.toFixed(2)} cals</p>
                         </div>
                         <div className="p-6 border-2 border-gray-300 rounded-lg">
                             <h2 className="text-lg">Carbs</h2>

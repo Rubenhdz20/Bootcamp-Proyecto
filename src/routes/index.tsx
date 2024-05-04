@@ -5,7 +5,7 @@ import SearchRecipee from '../pages/SearchRecipee';
 import RecipeDetails from '../pages/RecipeDetails';
 import MealLoggin from "../pages/MealLoggin";
 import Error404 from "../pages/Error404";
-
+import ErrorBoundary from "../components/ErrorBoundary";
 
 const router = createBrowserRouter([
     {  
@@ -19,7 +19,11 @@ const router = createBrowserRouter([
     },
     {
         path:'/detail/:recipeId',
-        element: <RecipeDetails/>
+        element: (
+            <ErrorBoundary>
+                <RecipeDetails/>
+            </ErrorBoundary>
+        )
     },
     {
         path:'/meal-loggin',
